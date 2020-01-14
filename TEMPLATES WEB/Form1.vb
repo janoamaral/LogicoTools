@@ -51,10 +51,13 @@
     End Sub
 
     Private Sub rtfCSS_KeyUp(sender As Object, e As KeyEventArgs) Handles rtfCSS.KeyUp
-        Debug.Print(e.KeyValue)
         Select Case e.KeyValue
             ' Refrescar en Enter, } o ;
             Case 13, 191, 188
+                ' Si es coma salir inmediatamente
+                If e.KeyValue = 188 And Not e.Modifiers = Keys.Shift Then Exit Sub
+
+                ' TODO: Si la última tecla fue ";" y se presiono ENTER, no volver a refrescar
                 Renderer.Style = rtfCSS.Text
                 Renderer.Body = rtfCode.Text
                 wb.DocumentText = Renderer.Render
