@@ -24,6 +24,7 @@ Partial Class frmPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
@@ -64,8 +65,8 @@ Partial Class frmPrincipal
         '
         Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ArchivoToolStripMenuItem.Text = "Archivo"
+        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.ArchivoToolStripMenuItem.Text = "ARCHIVO"
         '
         'SalirToolStripMenuItem
         '
@@ -77,14 +78,14 @@ Partial Class frmPrincipal
         '
         Me.TemplatesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem})
         Me.TemplatesToolStripMenuItem.Name = "TemplatesToolStripMenuItem"
-        Me.TemplatesToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
-        Me.TemplatesToolStripMenuItem.Text = "Templates"
+        Me.TemplatesToolStripMenuItem.Size = New System.Drawing.Size(80, 20)
+        Me.TemplatesToolStripMenuItem.Text = "TEMPLATES"
         '
         'NuevoToolStripMenuItem
         '
         Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
         Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.NuevoToolStripMenuItem.Text = "Nuevo proyecto"
+        Me.NuevoToolStripMenuItem.Text = "Web"
         '
         'frmPrincipal
         '
@@ -93,6 +94,7 @@ Partial Class frmPrincipal
         Me.ClientSize = New System.Drawing.Size(1010, 558)
         Me.Controls.Add(Me.StatusStrip)
         Me.Controls.Add(Me.mnuPrincipal)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuPrincipal
         Me.Name = "frmPrincipal"
