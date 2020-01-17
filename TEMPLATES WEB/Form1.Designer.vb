@@ -126,12 +126,13 @@ Partial Class frmWeb
         Me.rtfCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.rtfCode.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.rtfCode.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtfCode.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtfCode.Font = New System.Drawing.Font("JetBrains Mono", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtfCode.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.rtfCode.Location = New System.Drawing.Point(8, 8)
         Me.rtfCode.Name = "rtfCode"
         Me.rtfCode.Size = New System.Drawing.Size(377, 207)
         Me.rtfCode.TabIndex = 2
+        Me.rtfCode.Tag = resources.GetString("rtfCode.Tag")
         Me.rtfCode.Text = ""
         Me.rtfCode.WordWrap = False
         '
