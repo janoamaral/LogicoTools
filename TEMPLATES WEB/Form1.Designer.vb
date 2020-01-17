@@ -26,9 +26,8 @@ Partial Class frmWeb
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.spltMain = New System.Windows.Forms.SplitContainer()
         Me.spltCode = New System.Windows.Forms.SplitContainer()
-        Me.rtfCSS = New System.Windows.Forms.RichTextBox()
         Me.rtfCode = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.rtfCSS = New System.Windows.Forms.RichTextBox()
         Me.splOutput = New System.Windows.Forms.SplitContainer()
         Me.wb = New System.Windows.Forms.WebBrowser()
         Me.rtfTemplate = New System.Windows.Forms.RichTextBox()
@@ -108,30 +107,18 @@ Partial Class frmWeb
         '
         'spltCode.Panel1
         '
-        Me.spltCode.Panel1.Controls.Add(Me.rtfCSS)
+        Me.spltCode.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.spltCode.Panel1.Controls.Add(Me.rtfCode)
+        Me.spltCode.Panel1.Padding = New System.Windows.Forms.Padding(8)
         '
         'spltCode.Panel2
         '
-        Me.spltCode.Panel2.Controls.Add(Me.rtfCode)
-        Me.spltCode.Panel2.Controls.Add(Me.RichTextBox1)
+        Me.spltCode.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.spltCode.Panel2.Controls.Add(Me.rtfCSS)
+        Me.spltCode.Panel2.Padding = New System.Windows.Forms.Padding(8)
         Me.spltCode.Size = New System.Drawing.Size(395, 469)
         Me.spltCode.SplitterDistance = 225
         Me.spltCode.TabIndex = 0
-        '
-        'rtfCSS
-        '
-        Me.rtfCSS.AcceptsTab = True
-        Me.rtfCSS.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.rtfCSS.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.rtfCSS.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtfCSS.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtfCSS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.rtfCSS.Location = New System.Drawing.Point(0, 0)
-        Me.rtfCSS.Name = "rtfCSS"
-        Me.rtfCSS.Size = New System.Drawing.Size(393, 223)
-        Me.rtfCSS.TabIndex = 0
-        Me.rtfCSS.Text = ""
-        Me.rtfCSS.WordWrap = False
         '
         'rtfCode
         '
@@ -141,26 +128,28 @@ Partial Class frmWeb
         Me.rtfCode.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtfCode.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtfCode.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.rtfCode.Location = New System.Drawing.Point(0, 0)
+        Me.rtfCode.Location = New System.Drawing.Point(8, 8)
         Me.rtfCode.Name = "rtfCode"
-        Me.rtfCode.Size = New System.Drawing.Size(393, 238)
+        Me.rtfCode.Size = New System.Drawing.Size(377, 207)
         Me.rtfCode.TabIndex = 2
         Me.rtfCode.Text = ""
         Me.rtfCode.WordWrap = False
         '
-        'RichTextBox1
+        'rtfCSS
         '
-        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(393, 238)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = ""
-        Me.RichTextBox1.WordWrap = False
+        Me.rtfCSS.AcceptsTab = True
+        Me.rtfCSS.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.rtfCSS.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.rtfCSS.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtfCSS.Font = New System.Drawing.Font("Consolas", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rtfCSS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.rtfCSS.Location = New System.Drawing.Point(8, 8)
+        Me.rtfCSS.Margin = New System.Windows.Forms.Padding(0)
+        Me.rtfCSS.Name = "rtfCSS"
+        Me.rtfCSS.Size = New System.Drawing.Size(377, 222)
+        Me.rtfCSS.TabIndex = 0
+        Me.rtfCSS.Text = ""
+        Me.rtfCSS.WordWrap = False
         '
         'splOutput
         '
@@ -186,8 +175,10 @@ Partial Class frmWeb
         Me.wb.Location = New System.Drawing.Point(0, 0)
         Me.wb.MinimumSize = New System.Drawing.Size(20, 20)
         Me.wb.Name = "wb"
+        Me.wb.ScriptErrorsSuppressed = True
         Me.wb.Size = New System.Drawing.Size(399, 467)
         Me.wb.TabIndex = 0
+        Me.wb.WebBrowserShortcutsEnabled = False
         '
         'rtfTemplate
         '
@@ -199,7 +190,7 @@ Partial Class frmWeb
         Me.rtfTemplate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.rtfTemplate.Location = New System.Drawing.Point(0, 0)
         Me.rtfTemplate.Name = "rtfTemplate"
-        Me.rtfTemplate.Size = New System.Drawing.Size(199, 467)
+        Me.rtfTemplate.Size = New System.Drawing.Size(96, 100)
         Me.rtfTemplate.TabIndex = 3
         Me.rtfTemplate.Text = ""
         Me.rtfTemplate.WordWrap = False
@@ -360,7 +351,6 @@ Partial Class frmWeb
     Friend WithEvents btnStyle As ToolStripButton
     Friend WithEvents btnCode As ToolStripButton
     Friend WithEvents btnFullscreen As ToolStripButton
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents rtfCode As RichTextBox
     Friend WithEvents splOutput As SplitContainer
     Friend WithEvents rtfTemplate As RichTextBox
