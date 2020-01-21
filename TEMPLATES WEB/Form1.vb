@@ -4,6 +4,12 @@
     Public Property Renderer As New TemplateRenderer()
 
 
+    Private Sub RefrescarNavegador()
+        Renderer.Style = rtfCSS.Text
+        Renderer.Body = rtfCode.Text
+        wb.DocumentText = Renderer.Render
+    End Sub
+
     Private Sub btnFullscreen_Click(sender As Object, e As EventArgs) Handles btnFullscreen.Click
         If btnFullscreen.Checked Then
             spltMain.Panel1Collapsed = True
@@ -25,7 +31,7 @@
             tmpStr &= "font-family: Arial, sans-serif;" & vbCrLf
             tmpStr &= "}" & vbCrLf
             rtfCSS.Text = tmpStr
-            wb.DocumentText = Renderer.Render
+            RefrescarNavegador()
         End If
     End Sub
 
@@ -66,9 +72,7 @@
                 If e.KeyValue = 188 And Not e.Modifiers = Keys.Shift Then Exit Sub
 
                 ' TODO: Si la última tecla fue ";" y se presiono ENTER, no volver a refrescar
-                Renderer.Style = rtfCSS.Text
-                Renderer.Body = rtfCode.Text
-                wb.DocumentText = Renderer.Render
+                RefrescarNavegador()
             Case 222
                 ' Cerrar la llave y posicionarse en el medio
                 rtfCSS.SuspendLayout()
@@ -88,16 +92,12 @@
 
     Private Sub rtfCode_KeyUp(sender As Object, e As KeyEventArgs) Handles rtfCode.KeyUp
         If e.KeyCode = Keys.F5 Then
-            Renderer.Style = rtfCSS.Text
-            Renderer.Body = rtfCode.Text
-            wb.DocumentText = Renderer.Render
+            RefrescarNavegador()
         End If
 
         Select Case e.KeyValue
             Case 13
-                Renderer.Style = rtfCSS.Text
-                Renderer.Body = rtfCode.Text
-                wb.DocumentText = Renderer.Render
+                RefrescarNavegador()
             Case 122
                 btnFullscreen.Checked = Not btnFullscreen.Checked
                 If btnFullscreen.Checked Then
@@ -156,5 +156,9 @@
             rtfTemplate.Paste()
             Exit Sub
         End If
+    End Sub
+
+    Private Sub btnRefrescarBrowser_Click(sender As Object, e As EventArgs) Handles btnRefrescarBrowser.Click
+        RefrescarNavegador()
     End Sub
 End Class

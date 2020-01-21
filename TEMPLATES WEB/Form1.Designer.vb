@@ -28,6 +28,10 @@ Partial Class frmWeb
         Me.spltMain = New System.Windows.Forms.SplitContainer()
         Me.spltCode = New System.Windows.Forms.SplitContainer()
         Me.rtfCode = New System.Windows.Forms.RichTextBox()
+        Me.mnuEditar = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CopiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopiarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PegarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.rtfCSS = New System.Windows.Forms.RichTextBox()
         Me.splOutput = New System.Windows.Forms.SplitContainer()
         Me.wb = New System.Windows.Forms.WebBrowser()
@@ -43,12 +47,8 @@ Partial Class frmWeb
         Me.btnOutput = New System.Windows.Forms.ToolStripButton()
         Me.btnFullscreen = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.PegarToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.btnRefrescarBrowser = New System.Windows.Forms.ToolStripButton()
         Me.oDiag = New System.Windows.Forms.OpenFileDialog()
-        Me.mnuEditar = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.CopiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CopiarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PegarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -60,12 +60,12 @@ Partial Class frmWeb
         Me.spltCode.Panel1.SuspendLayout()
         Me.spltCode.Panel2.SuspendLayout()
         Me.spltCode.SuspendLayout()
+        Me.mnuEditar.SuspendLayout()
         CType(Me.splOutput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.splOutput.Panel1.SuspendLayout()
         Me.splOutput.Panel2.SuspendLayout()
         Me.splOutput.SuspendLayout()
         Me.toolbarMain.SuspendLayout()
-        Me.mnuEditar.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripContainer1
@@ -144,6 +144,33 @@ Partial Class frmWeb
         Me.rtfCode.Text = ""
         Me.rtfCode.WordWrap = False
         '
+        'mnuEditar
+        '
+        Me.mnuEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopiarToolStripMenuItem, Me.CopiarToolStripMenuItem1, Me.PegarToolStripMenuItem})
+        Me.mnuEditar.Name = "mnuEditar"
+        Me.mnuEditar.Size = New System.Drawing.Size(152, 70)
+        '
+        'CopiarToolStripMenuItem
+        '
+        Me.CopiarToolStripMenuItem.Name = "CopiarToolStripMenuItem"
+        Me.CopiarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
+        Me.CopiarToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.CopiarToolStripMenuItem.Text = "Cortar"
+        '
+        'CopiarToolStripMenuItem1
+        '
+        Me.CopiarToolStripMenuItem1.Name = "CopiarToolStripMenuItem1"
+        Me.CopiarToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.CopiarToolStripMenuItem1.Size = New System.Drawing.Size(151, 22)
+        Me.CopiarToolStripMenuItem1.Text = "Copiar"
+        '
+        'PegarToolStripMenuItem
+        '
+        Me.PegarToolStripMenuItem.Name = "PegarToolStripMenuItem"
+        Me.PegarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
+        Me.PegarToolStripMenuItem.Size = New System.Drawing.Size(151, 22)
+        Me.PegarToolStripMenuItem.Text = "Pegar"
+        '
         'rtfCSS
         '
         Me.rtfCSS.AcceptsTab = True
@@ -208,10 +235,10 @@ Partial Class frmWeb
         'toolbarMain
         '
         Me.toolbarMain.Dock = System.Windows.Forms.DockStyle.None
-        Me.toolbarMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripButton, Me.btnAbrirArchivo, Me.GuardarToolStripButton, Me.ImprimirToolStripButton, Me.toolStripSeparator, Me.btnCode, Me.btnStyle, Me.btnOutput, Me.btnFullscreen, Me.toolStripSeparator1, Me.PegarToolStripButton})
+        Me.toolbarMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripButton, Me.btnAbrirArchivo, Me.GuardarToolStripButton, Me.ImprimirToolStripButton, Me.toolStripSeparator, Me.btnCode, Me.btnStyle, Me.btnOutput, Me.btnFullscreen, Me.toolStripSeparator1, Me.btnRefrescarBrowser})
         Me.toolbarMain.Location = New System.Drawing.Point(3, 0)
         Me.toolbarMain.Name = "toolbarMain"
-        Me.toolbarMain.Size = New System.Drawing.Size(231, 25)
+        Me.toolbarMain.Size = New System.Drawing.Size(262, 25)
         Me.toolbarMain.TabIndex = 0
         '
         'NuevoToolStripButton
@@ -304,45 +331,18 @@ Partial Class frmWeb
         Me.toolStripSeparator1.Name = "toolStripSeparator1"
         Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'PegarToolStripButton
+        'btnRefrescarBrowser
         '
-        Me.PegarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PegarToolStripButton.Image = CType(resources.GetObject("PegarToolStripButton.Image"), System.Drawing.Image)
-        Me.PegarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.PegarToolStripButton.Name = "PegarToolStripButton"
-        Me.PegarToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.PegarToolStripButton.Text = "Refrescar el navegador"
+        Me.btnRefrescarBrowser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnRefrescarBrowser.Image = CType(resources.GetObject("btnRefrescarBrowser.Image"), System.Drawing.Image)
+        Me.btnRefrescarBrowser.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnRefrescarBrowser.Name = "btnRefrescarBrowser"
+        Me.btnRefrescarBrowser.Size = New System.Drawing.Size(23, 22)
+        Me.btnRefrescarBrowser.Text = "Refrescar el navegador"
         '
         'oDiag
         '
         Me.oDiag.Filter = "All Files|*.*"
-        '
-        'mnuEditar
-        '
-        Me.mnuEditar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopiarToolStripMenuItem, Me.CopiarToolStripMenuItem1, Me.PegarToolStripMenuItem})
-        Me.mnuEditar.Name = "mnuEditar"
-        Me.mnuEditar.Size = New System.Drawing.Size(181, 92)
-        '
-        'CopiarToolStripMenuItem
-        '
-        Me.CopiarToolStripMenuItem.Name = "CopiarToolStripMenuItem"
-        Me.CopiarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CopiarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CopiarToolStripMenuItem.Text = "Cortar"
-        '
-        'CopiarToolStripMenuItem1
-        '
-        Me.CopiarToolStripMenuItem1.Name = "CopiarToolStripMenuItem1"
-        Me.CopiarToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopiarToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.CopiarToolStripMenuItem1.Text = "Copiar"
-        '
-        'PegarToolStripMenuItem
-        '
-        Me.PegarToolStripMenuItem.Name = "PegarToolStripMenuItem"
-        Me.PegarToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.PegarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.PegarToolStripMenuItem.Text = "Pegar"
         '
         'frmWeb
         '
@@ -366,13 +366,13 @@ Partial Class frmWeb
         Me.spltCode.Panel2.ResumeLayout(False)
         CType(Me.spltCode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.spltCode.ResumeLayout(False)
+        Me.mnuEditar.ResumeLayout(False)
         Me.splOutput.Panel1.ResumeLayout(False)
         Me.splOutput.Panel2.ResumeLayout(False)
         CType(Me.splOutput, System.ComponentModel.ISupportInitialize).EndInit()
         Me.splOutput.ResumeLayout(False)
         Me.toolbarMain.ResumeLayout(False)
         Me.toolbarMain.PerformLayout()
-        Me.mnuEditar.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -384,7 +384,7 @@ Partial Class frmWeb
     Friend WithEvents GuardarToolStripButton As ToolStripButton
     Friend WithEvents ImprimirToolStripButton As ToolStripButton
     Friend WithEvents toolStripSeparator As ToolStripSeparator
-    Friend WithEvents PegarToolStripButton As ToolStripButton
+    Friend WithEvents btnRefrescarBrowser As ToolStripButton
     Friend WithEvents toolStripSeparator1 As ToolStripSeparator
     Friend WithEvents spltMain As SplitContainer
     Friend WithEvents spltCode As SplitContainer
