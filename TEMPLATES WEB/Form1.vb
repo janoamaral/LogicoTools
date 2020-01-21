@@ -23,7 +23,7 @@
             tmpStr &= "margin: 0;" & vbCrLf
             tmpStr &= "padding: 0;" & vbCrLf
             tmpStr &= "font-family: Arial, sans-serif;" & vbCrLf
-            tmpStr &= "}>" & vbCrLf
+            tmpStr &= "}" & vbCrLf
             rtfCSS.Text = tmpStr
             wb.DocumentText = Renderer.Render
         End If
@@ -107,5 +107,54 @@
                 End If
 
         End Select
+    End Sub
+
+    Private Sub AbrirToolStripButton_Click(sender As Object, e As EventArgs) Handles btnAbrirArchivo.Click
+
+    End Sub
+
+    Private Sub CopiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopiarToolStripMenuItem.Click
+        If rtfCode.Focused Then
+            rtfCode.Cut()
+            Exit Sub
+        End If
+        If rtfCSS.Focused Then
+            rtfCSS.Cut()
+            Exit Sub
+        End If
+        If rtfTemplate.Focused Then
+            rtfTemplate.Cut()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub CopiarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CopiarToolStripMenuItem1.Click
+        If rtfCode.Focused Then
+            rtfCode.Copy()
+            Exit Sub
+        End If
+        If rtfCSS.Focused Then
+            rtfCSS.Copy()
+            Exit Sub
+        End If
+        If rtfTemplate.Focused Then
+            rtfTemplate.Copy()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub PegarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PegarToolStripMenuItem.Click
+        If rtfCode.Focused Then
+            rtfCode.Paste()
+            Exit Sub
+        End If
+        If rtfCSS.Focused Then
+            rtfCSS.Paste()
+            Exit Sub
+        End If
+        If rtfTemplate.Focused Then
+            rtfTemplate.Paste()
+            Exit Sub
+        End If
     End Sub
 End Class
