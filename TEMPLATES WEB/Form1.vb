@@ -3,6 +3,15 @@
     Public Property archivoPath As String = ""
     Public Property Renderer As New TemplateRenderer()
 
+    Public Sub Resetear()
+        Renderer.Reset()
+        rtfCode.Clear()
+        rtfCSS.Clear()
+        rtfTemplate.Clear()
+        rtfCode.Modified = False
+        rtfCSS.Modified = False
+        rtfTemplate.Modified = False
+    End Sub
 
     Private Sub RefrescarNavegador()
         Renderer.Style = rtfCSS.Text
@@ -19,7 +28,7 @@
     End Sub
 
     Private Sub NuevoToolStripButton_Click(sender As Object, e As EventArgs) Handles NuevoToolStripButton.Click
-        If Not Me.archivoCargado Then
+        If Not Me.archivoCargado And Not rtfCode.Modified And Not rtfCSS.Modified Then
             Renderer.Reset()
             rtfCode.Clear()
             rtfCSS.Clear()
@@ -32,6 +41,15 @@
             tmpStr &= "}" & vbCrLf
             rtfCSS.Text = tmpStr
             RefrescarNavegador()
+        Else
+            Select Case MsgBox("El proyecto fue modificado. ¿Guardar antes de continuar?", MsgBoxStyle.Question + MsgBoxStyle.YesNoCancel, "Web template")
+                Case MsgBoxResult.Yes
+                    Debug.Print("Guardar")
+                Case MsgBoxResult.No
+                    Debug.Print("Abrir")
+                Case Else
+                    Exit Sub
+            End Select
         End If
     End Sub
 

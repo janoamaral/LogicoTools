@@ -76,6 +76,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MODULOS SOCCAM\ClaseSoccam.vb" />
+    <Compile Include="MODULOS SOCCAM\frmModulos.Designer.vb">
+      <DependentUpon>frmModulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS SOCCAM\frmModulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TEMPLATES WEB\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +114,9 @@
     <Compile Include="TEMPLATES WEB\TemplateRenderer.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MODULOS SOCCAM\frmModulos.resx">
+      <DependentUpon>frmModulos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TEMPLATES WEB\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

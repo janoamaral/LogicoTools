@@ -50,7 +50,7 @@ Partial Class frmWeb
         Me.btnRefrescarBrowser = New System.Windows.Forms.ToolStripButton()
         Me.oDiag = New System.Windows.Forms.OpenFileDialog()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
-        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
+        Me.ToolStripContainer1.LeftToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         CType(Me.spltMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.spltMain.Panel1.SuspendLayout()
@@ -74,17 +74,17 @@ Partial Class frmWeb
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.spltMain)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(800, 469)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(768, 494)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        '
+        'ToolStripContainer1.LeftToolStripPanel
+        '
+        Me.ToolStripContainer1.LeftToolStripPanel.Controls.Add(Me.toolbarMain)
         Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         Me.ToolStripContainer1.Size = New System.Drawing.Size(800, 494)
         Me.ToolStripContainer1.TabIndex = 0
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
-        '
-        'ToolStripContainer1.TopToolStripPanel
-        '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.toolbarMain)
         '
         'spltMain
         '
@@ -100,8 +100,8 @@ Partial Class frmWeb
         'spltMain.Panel2
         '
         Me.spltMain.Panel2.Controls.Add(Me.splOutput)
-        Me.spltMain.Size = New System.Drawing.Size(800, 469)
-        Me.spltMain.SplitterDistance = 395
+        Me.spltMain.Size = New System.Drawing.Size(768, 494)
+        Me.spltMain.SplitterDistance = 379
         Me.spltMain.TabIndex = 0
         '
         'spltCode
@@ -123,8 +123,8 @@ Partial Class frmWeb
         Me.spltCode.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.spltCode.Panel2.Controls.Add(Me.rtfCSS)
         Me.spltCode.Panel2.Padding = New System.Windows.Forms.Padding(8)
-        Me.spltCode.Size = New System.Drawing.Size(395, 469)
-        Me.spltCode.SplitterDistance = 225
+        Me.spltCode.Size = New System.Drawing.Size(379, 494)
+        Me.spltCode.SplitterDistance = 236
         Me.spltCode.TabIndex = 0
         '
         'rtfCode
@@ -138,7 +138,7 @@ Partial Class frmWeb
         Me.rtfCode.ForeColor = System.Drawing.Color.FromArgb(CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.rtfCode.Location = New System.Drawing.Point(8, 8)
         Me.rtfCode.Name = "rtfCode"
-        Me.rtfCode.Size = New System.Drawing.Size(377, 207)
+        Me.rtfCode.Size = New System.Drawing.Size(361, 218)
         Me.rtfCode.TabIndex = 2
         Me.rtfCode.Tag = resources.GetString("rtfCode.Tag")
         Me.rtfCode.Text = ""
@@ -183,7 +183,7 @@ Partial Class frmWeb
         Me.rtfCSS.Location = New System.Drawing.Point(8, 8)
         Me.rtfCSS.Margin = New System.Windows.Forms.Padding(0)
         Me.rtfCSS.Name = "rtfCSS"
-        Me.rtfCSS.Size = New System.Drawing.Size(377, 222)
+        Me.rtfCSS.Size = New System.Drawing.Size(361, 236)
         Me.rtfCSS.TabIndex = 0
         Me.rtfCSS.Text = ""
         Me.rtfCSS.WordWrap = False
@@ -202,7 +202,7 @@ Partial Class frmWeb
         '
         Me.splOutput.Panel2.Controls.Add(Me.rtfTemplate)
         Me.splOutput.Panel2Collapsed = True
-        Me.splOutput.Size = New System.Drawing.Size(399, 467)
+        Me.splOutput.Size = New System.Drawing.Size(383, 492)
         Me.splOutput.SplitterDistance = 196
         Me.splOutput.TabIndex = 1
         '
@@ -213,7 +213,7 @@ Partial Class frmWeb
         Me.wb.MinimumSize = New System.Drawing.Size(20, 20)
         Me.wb.Name = "wb"
         Me.wb.ScriptErrorsSuppressed = True
-        Me.wb.Size = New System.Drawing.Size(399, 467)
+        Me.wb.Size = New System.Drawing.Size(383, 492)
         Me.wb.TabIndex = 0
         Me.wb.WebBrowserShortcutsEnabled = False
         '
@@ -236,9 +236,9 @@ Partial Class frmWeb
         '
         Me.toolbarMain.Dock = System.Windows.Forms.DockStyle.None
         Me.toolbarMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripButton, Me.btnAbrirArchivo, Me.GuardarToolStripButton, Me.ImprimirToolStripButton, Me.toolStripSeparator, Me.btnCode, Me.btnStyle, Me.btnOutput, Me.btnFullscreen, Me.toolStripSeparator1, Me.btnRefrescarBrowser})
-        Me.toolbarMain.Location = New System.Drawing.Point(3, 0)
+        Me.toolbarMain.Location = New System.Drawing.Point(0, 3)
         Me.toolbarMain.Name = "toolbarMain"
-        Me.toolbarMain.Size = New System.Drawing.Size(262, 25)
+        Me.toolbarMain.Size = New System.Drawing.Size(32, 249)
         Me.toolbarMain.TabIndex = 0
         '
         'NuevoToolStripButton
@@ -247,7 +247,7 @@ Partial Class frmWeb
         Me.NuevoToolStripButton.Image = CType(resources.GetObject("NuevoToolStripButton.Image"), System.Drawing.Image)
         Me.NuevoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NuevoToolStripButton.Name = "NuevoToolStripButton"
-        Me.NuevoToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.NuevoToolStripButton.Size = New System.Drawing.Size(30, 20)
         Me.NuevoToolStripButton.Text = "&Nuevo"
         '
         'btnAbrirArchivo
@@ -256,7 +256,7 @@ Partial Class frmWeb
         Me.btnAbrirArchivo.Image = CType(resources.GetObject("btnAbrirArchivo.Image"), System.Drawing.Image)
         Me.btnAbrirArchivo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnAbrirArchivo.Name = "btnAbrirArchivo"
-        Me.btnAbrirArchivo.Size = New System.Drawing.Size(23, 22)
+        Me.btnAbrirArchivo.Size = New System.Drawing.Size(30, 20)
         Me.btnAbrirArchivo.Text = "&Abrir"
         '
         'GuardarToolStripButton
@@ -265,7 +265,7 @@ Partial Class frmWeb
         Me.GuardarToolStripButton.Image = CType(resources.GetObject("GuardarToolStripButton.Image"), System.Drawing.Image)
         Me.GuardarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.GuardarToolStripButton.Name = "GuardarToolStripButton"
-        Me.GuardarToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.GuardarToolStripButton.Size = New System.Drawing.Size(30, 20)
         Me.GuardarToolStripButton.Text = "&Guardar"
         '
         'ImprimirToolStripButton
@@ -274,13 +274,13 @@ Partial Class frmWeb
         Me.ImprimirToolStripButton.Image = CType(resources.GetObject("ImprimirToolStripButton.Image"), System.Drawing.Image)
         Me.ImprimirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ImprimirToolStripButton.Name = "ImprimirToolStripButton"
-        Me.ImprimirToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.ImprimirToolStripButton.Size = New System.Drawing.Size(30, 20)
         Me.ImprimirToolStripButton.Text = "&Imprimir"
         '
         'toolStripSeparator
         '
         Me.toolStripSeparator.Name = "toolStripSeparator"
-        Me.toolStripSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.toolStripSeparator.Size = New System.Drawing.Size(30, 6)
         '
         'btnCode
         '
@@ -291,7 +291,7 @@ Partial Class frmWeb
         Me.btnCode.Image = CType(resources.GetObject("btnCode.Image"), System.Drawing.Image)
         Me.btnCode.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCode.Name = "btnCode"
-        Me.btnCode.Size = New System.Drawing.Size(23, 22)
+        Me.btnCode.Size = New System.Drawing.Size(30, 20)
         Me.btnCode.Text = "Muestra u oculta el panel CSS"
         '
         'btnStyle
@@ -303,7 +303,7 @@ Partial Class frmWeb
         Me.btnStyle.Image = CType(resources.GetObject("btnStyle.Image"), System.Drawing.Image)
         Me.btnStyle.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnStyle.Name = "btnStyle"
-        Me.btnStyle.Size = New System.Drawing.Size(23, 22)
+        Me.btnStyle.Size = New System.Drawing.Size(30, 20)
         Me.btnStyle.Text = "Mostrar u ocultar panel HTML"
         '
         'btnOutput
@@ -313,7 +313,7 @@ Partial Class frmWeb
         Me.btnOutput.Image = CType(resources.GetObject("btnOutput.Image"), System.Drawing.Image)
         Me.btnOutput.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnOutput.Name = "btnOutput"
-        Me.btnOutput.Size = New System.Drawing.Size(23, 22)
+        Me.btnOutput.Size = New System.Drawing.Size(30, 20)
         Me.btnOutput.Text = "ToolStripButton1"
         '
         'btnFullscreen
@@ -323,13 +323,13 @@ Partial Class frmWeb
         Me.btnFullscreen.Image = CType(resources.GetObject("btnFullscreen.Image"), System.Drawing.Image)
         Me.btnFullscreen.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnFullscreen.Name = "btnFullscreen"
-        Me.btnFullscreen.Size = New System.Drawing.Size(23, 22)
+        Me.btnFullscreen.Size = New System.Drawing.Size(30, 20)
         Me.btnFullscreen.Text = "Navegador en modo fullscreen"
         '
         'toolStripSeparator1
         '
         Me.toolStripSeparator1.Name = "toolStripSeparator1"
-        Me.toolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.toolStripSeparator1.Size = New System.Drawing.Size(30, 6)
         '
         'btnRefrescarBrowser
         '
@@ -337,7 +337,7 @@ Partial Class frmWeb
         Me.btnRefrescarBrowser.Image = CType(resources.GetObject("btnRefrescarBrowser.Image"), System.Drawing.Image)
         Me.btnRefrescarBrowser.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnRefrescarBrowser.Name = "btnRefrescarBrowser"
-        Me.btnRefrescarBrowser.Size = New System.Drawing.Size(23, 22)
+        Me.btnRefrescarBrowser.Size = New System.Drawing.Size(30, 20)
         Me.btnRefrescarBrowser.Text = "Refrescar el navegador"
         '
         'oDiag
@@ -354,8 +354,8 @@ Partial Class frmWeb
         Me.Name = "frmWeb"
         Me.Text = "WEB TEMPLATE"
         Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
+        Me.ToolStripContainer1.LeftToolStripPanel.ResumeLayout(False)
+        Me.ToolStripContainer1.LeftToolStripPanel.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)
         Me.ToolStripContainer1.PerformLayout()
         Me.spltMain.Panel1.ResumeLayout(False)

@@ -7,6 +7,7 @@ Public Class frmPrincipal
 
     Private Sub NuevoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem.Click
         frmWeb.MdiParent = Me
+        frmWeb.Resetear()
         frmWeb.Show()
     End Sub
 
@@ -32,5 +33,10 @@ Public Class frmPrincipal
         frmWeb.rtfTemplate.ForeColor = fgColor
         frmWeb.spltCode.Panel1.ForeColor = fgColor
         frmWeb.spltCode.Panel2.ForeColor = fgColor
+    End Sub
+
+    Private Sub ModulosSoccamToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModulosSoccamToolStripMenuItem.Click
+        frmModulos.MdiParent = Me
+        frmModulos.Show()
     End Sub
 End Class

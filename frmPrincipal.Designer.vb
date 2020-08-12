@@ -30,12 +30,13 @@ Partial Class frmPrincipal
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.mnuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuDarkMode = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TemplatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuDarkMode = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModulosSoccamToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip.SuspendLayout()
         Me.mnuPrincipal.SuspendLayout()
         Me.SuspendLayout()
@@ -60,6 +61,7 @@ Partial Class frmPrincipal
         Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.TemplatesToolStripMenuItem})
         Me.mnuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.mnuPrincipal.Name = "mnuPrincipal"
+        Me.mnuPrincipal.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.mnuPrincipal.Size = New System.Drawing.Size(1010, 24)
         Me.mnuPrincipal.TabIndex = 9
         Me.mnuPrincipal.Text = "MenuStrip1"
@@ -71,15 +73,34 @@ Partial Class frmPrincipal
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.ArchivoToolStripMenuItem.Text = "ARCHIVO"
         '
+        'OpcionesToolStripMenuItem
+        '
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDarkMode})
+        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
+        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.OpcionesToolStripMenuItem.Text = "&Opciones"
+        '
+        'mnuDarkMode
+        '
+        Me.mnuDarkMode.CheckOnClick = True
+        Me.mnuDarkMode.Name = "mnuDarkMode"
+        Me.mnuDarkMode.Size = New System.Drawing.Size(132, 22)
+        Me.mnuDarkMode.Text = "Dark Mode"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(121, 6)
+        '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'TemplatesToolStripMenuItem
         '
-        Me.TemplatesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem})
+        Me.TemplatesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.ModulosSoccamToolStripMenuItem})
         Me.TemplatesToolStripMenuItem.Name = "TemplatesToolStripMenuItem"
         Me.TemplatesToolStripMenuItem.Size = New System.Drawing.Size(80, 20)
         Me.TemplatesToolStripMenuItem.Text = "TEMPLATES"
@@ -87,27 +108,14 @@ Partial Class frmPrincipal
         'NuevoToolStripMenuItem
         '
         Me.NuevoToolStripMenuItem.Name = "NuevoToolStripMenuItem"
-        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(98, 22)
+        Me.NuevoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.NuevoToolStripMenuItem.Text = "Web"
         '
-        'OpcionesToolStripMenuItem
+        'ModulosSoccamToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDarkMode})
-        Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
-        Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.OpcionesToolStripMenuItem.Text = "&Opciones"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(177, 6)
-        '
-        'mnuDarkMode
-        '
-        Me.mnuDarkMode.CheckOnClick = True
-        Me.mnuDarkMode.Name = "mnuDarkMode"
-        Me.mnuDarkMode.Size = New System.Drawing.Size(180, 22)
-        Me.mnuDarkMode.Text = "Dark Mode"
+        Me.ModulosSoccamToolStripMenuItem.Name = "ModulosSoccamToolStripMenuItem"
+        Me.ModulosSoccamToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModulosSoccamToolStripMenuItem.Text = "Clases Soccam"
         '
         'frmPrincipal
         '
@@ -120,7 +128,9 @@ Partial Class frmPrincipal
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.mnuPrincipal
         Me.Name = "frmPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Lógico Tools"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.StatusStrip.ResumeLayout(False)
         Me.StatusStrip.PerformLayout()
         Me.mnuPrincipal.ResumeLayout(False)
@@ -140,4 +150,5 @@ Partial Class frmPrincipal
     Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
     Friend WithEvents mnuDarkMode As ToolStripMenuItem
+    Friend WithEvents ModulosSoccamToolStripMenuItem As ToolStripMenuItem
 End Class
