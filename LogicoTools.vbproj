@@ -76,6 +76,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMMON\ModTemplateTablaSoccam.vb" />
     <Compile Include="MODULOS SOCCAM\ClaseSoccam.vb" />
     <Compile Include="MODULOS SOCCAM\frmModulos.Designer.vb">
       <DependentUpon>frmModulos.vb</DependentUpon>

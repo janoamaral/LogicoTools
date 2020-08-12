@@ -26,7 +26,7 @@ Partial Class frmPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.txtStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.mnuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,18 +43,18 @@ Partial Class frmPrincipal
         '
         'StatusStrip
         '
-        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
+        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.txtStatusLabel})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 536)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(1010, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
-        'ToolStripStatusLabel
+        'txtStatusLabel
         '
-        Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
-        Me.ToolStripStatusLabel.Text = "Estado"
+        Me.txtStatusLabel.Name = "txtStatusLabel"
+        Me.txtStatusLabel.Size = New System.Drawing.Size(42, 17)
+        Me.txtStatusLabel.Text = "Estado"
         '
         'mnuPrincipal
         '
@@ -140,7 +140,7 @@ Partial Class frmPrincipal
 
     End Sub
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents ToolStripStatusLabel As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents txtStatusLabel As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents mnuPrincipal As MenuStrip
     Friend WithEvents ArchivoToolStripMenuItem As ToolStripMenuItem
