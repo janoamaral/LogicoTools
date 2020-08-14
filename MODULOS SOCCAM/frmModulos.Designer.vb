@@ -110,7 +110,7 @@ Partial Class frmModulos
         Me.splMain.Panel2.Controls.Add(Me.txtOutput)
         Me.splMain.Panel2.Padding = New System.Windows.Forms.Padding(5)
         Me.splMain.Size = New System.Drawing.Size(768, 425)
-        Me.splMain.SplitterDistance = 379
+        Me.splMain.SplitterDistance = 378
         Me.splMain.TabIndex = 0
         '
         'spltCode
@@ -129,7 +129,7 @@ Partial Class frmModulos
         '
         Me.spltCode.Panel2.Controls.Add(Me.txtCode)
         Me.spltCode.Panel2.Padding = New System.Windows.Forms.Padding(5)
-        Me.spltCode.Size = New System.Drawing.Size(379, 425)
+        Me.spltCode.Size = New System.Drawing.Size(378, 425)
         Me.spltCode.SplitterDistance = 127
         Me.spltCode.TabIndex = 0
         '
@@ -168,7 +168,7 @@ Partial Class frmModulos
         Me.txtCode.Location = New System.Drawing.Point(5, 5)
         Me.txtCode.Name = "txtCode"
         Me.txtCode.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.txtCode.Size = New System.Drawing.Size(367, 413)
+        Me.txtCode.Size = New System.Drawing.Size(366, 413)
         Me.txtCode.TabIndex = 4
         Me.txtCode.Text = ""
         '
@@ -209,7 +209,7 @@ Partial Class frmModulos
         Me.txtOutput.Location = New System.Drawing.Point(5, 5)
         Me.txtOutput.Name = "txtOutput"
         Me.txtOutput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical
-        Me.txtOutput.Size = New System.Drawing.Size(373, 413)
+        Me.txtOutput.Size = New System.Drawing.Size(374, 413)
         Me.txtOutput.TabIndex = 3
         Me.txtOutput.Text = ""
         '
